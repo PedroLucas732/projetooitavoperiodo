@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <%- include("../partials/cabecalho.ejs"); %>
+</head>
+<body>
+    <div class="container">
+        <h2><%= carro._id? "Atualizar": "Cadastrar"%> carro</h2>
+        <form action="<%= carro._id? "/carros/atualizar": "/carros"%>" method="post">
+            <input type="hidden" name="id" value="<%=carro._id%>">
+            <div><label class="form-label" for="marca">Marca: </label> <input class="form-control" type="text" id="marca" name="marca" value="<%=carro.marca%>" required></div>
+            <div><label class="form-label" for="modelo">Modelo: </label> <input class="form-control" type="text" id="modelo" name="modelo" value="<%=carro.modelo%>" required></div>
+            <div><label class="form-label" for="placa">Placa: </label> <input class="form-control" type="text" id="placa" name="placa" value="<%=carro.placa%>" required></div><br>
+            <button type="submit" class="btn btn-success"><%= carro._id? "Atualizar": "Salvar"%></button>
+            <a href="/" class="btn btn-primary">Voltar</a>
+        </form>
+    </div>
+    <%- include("../partials/rodape.ejs"); %>
+</body>
+</html>

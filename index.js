@@ -15,10 +15,12 @@ app.use(session({
 const mongoose = require("mongoose");
 mongoose.connect(process.env.MONGO_URI);
 
-const alunoRoutes = require("./routes/alunoRoutes");
+const auxiliarRoutes = require("./routes/auxiliarRoutes");
 const usuarioRoutes = require("./routes/usuarioRoutes");
-app.use(alunoRoutes);
+const carroRoutes = require("./routes/carroRoutes");
+app.use(auxiliarRoutes);
 app.use(usuarioRoutes);
+app.use(carroRoutes);
 
 app.get("/", function(req, res){
     if(req.session.usuario){

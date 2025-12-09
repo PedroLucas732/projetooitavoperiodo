@@ -8,41 +8,41 @@
 </head>
 <body>
     <div class="container">
-        <div><a href="/alunos/cadastrar" class="btn btn-success">Cadastrar</a></div>
-        <h2>Relatório de alunos</h2>
+        <div><a href="/auxiliares/cadastrar" class="btn btn-success">Cadastrar</a></div>
+        <h2>Relatório de auxiliares</h2>
     <% if(status=="1"){%>
         <div class="alert alert-success alert-dismissible">
-            Aluno cadastrado com <b>sucesso!</b>
+            Auxiliar cadastrado com <b>sucesso!</b>
             <button type="button" class="btn-close" data-bs-dismiss="alert" slot="end"></button><br>
         </div>
     <% }else if(status=="2"){ %>
             <div class="alert alert-danger alert-dismissible">
-                Aluno removido com <b>sucesso!</b>
+                Auxiliar removido com <b>sucesso!</b>
                 <button type="button" class="btn-close" data-bs-dismiss="alert" slot="end"></button><br>
             </div>
         <% }else if(status=="3"){ %>
             <div class="alert alert-warning alert-dismissible">
-                Aluno atualizado com <b>sucesso!</b>
+                Auxiliar atualizado com <b>sucesso!</b>
                 <button type="button" class="btn-close" data-bs-dismiss="alert" slot="end"></button><br>
             </div>
         <% }; %>
     <table class="table table-striped">
         <tr>
-            <th>Matrícula</th>
+            <th>Codigo</th>
             <th>Nome</th>
-            <th>Curso</th>
+            <th>Setor</th>
             <th>Detalhar</th>
             <th>Atualizar</th>
             <th>Excluir</th>
         </tr>
-        <%for(const x of alunos){%>
+        <%for(const x of auxiliares){%>
             <tr>
-                <td><div><%=x.matricula%></div></td>
+                <td><div><%=x.cod%></div></td>
                 <td><div><%=x.nome%></div></td>
-                <td><div><%=x.curso%></div></td>
-                <td><a href="/alunos/<%=x._id%>" class="btn btn-info">Detalhar</a></td>
-                <td><a href="/alunos/atualizar/<%=x._id%>" class="btn btn-warning">Atualizar</a></td>
-                <td><a onclick="return confirm('Deseja realmente excluir esse aluno?')" href="/alunos/remover/<%=x._id%>" class="btn btn-danger">Excluir</a></td>
+                <td><div><%=x.setor%></div></td>
+                <td><a href="/auxiliares/<%=x._id%>" class="btn btn-info">Detalhar</a></td>
+                <td><a href="/auxiliares/atualizar/<%=x._id%>" class="btn btn-warning">Atualizar</a></td>
+                <td><a onclick="return confirm('Deseja realmente excluir esse auxliar?')" href="/auxiliares/remover/<%=x._id%>" class="btn btn-danger">Excluir</a></td>
             </tr>
         <% }; %>
     </table>

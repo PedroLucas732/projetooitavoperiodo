@@ -8,14 +8,14 @@
 </head>
 <body>
     <div class="container">
-        <% if(aluno==undefined){%>
-            <div>Não há aluno com essa matrícula</div>
+        <% if(auxiliar==undefined){%>
+            <div>Não há auxiliar com esse codigo</div>
         <%}else{%>
-            <div>Matrícula: <%=aluno.matricula%></div>
-            <div>Nome: <%=aluno.nome%></div>
-            <div>Curso: <%=aluno.curso%></div>
+            <div>Codigo: <%=auxiliar.cod%></div>
+            <div>Nome: <%=auxiliar.nome%></div>
+            <div>Curso: <%=auxiliar.setor%></div>
         <%} %>
-        <br><a href="/alunos"  class="btn btn-primary">Voltar</a>
+        <br><a href="/auxiliares"  class="btn btn-primary">Voltar</a>
     </div>
     <%- include("../partials/rodape.ejs"); %>
 </body>

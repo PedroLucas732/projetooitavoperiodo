@@ -2,24 +2,25 @@
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/">IFPE</a>
+      <a class="navbar-brand" href="/">Mecanica de Edelio</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
-
         <ul class="navbar-nav">
+          <!-- Auxiliares -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Alunos
+              Auxiliares
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="/alunos/cadastrar">Cadastrar</a></li>
-              <li><a class="dropdown-item" href="/alunos">Relatório</a></li>
+              <li><a class="dropdown-item" href="/auxiliares/cadastrar">Cadastrar</a></li>
+              <li><a class="dropdown-item" href="/auxiliares">Relatório</a></li>
             </ul>
           </li>
 
+          <!-- Usuários -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Usuários
@@ -29,12 +30,19 @@
               <li><a class="dropdown-item" href="/usuarios">Relatório</a></li>
             </ul>
           </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Carros
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/carros/cadastrar">Cadastrar</a></li>
+              <li><a class="dropdown-item" href="/carros">Relatório</a></li>
+            </ul>
+          </li>
         </ul>
-
-
-
       </div>
+
       <a href="/usuarios/deslogar" class="btn btn-dark">Deslogar</a>
     </div>
-    
-  </nav>
+</nav>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carro</title>
+    <%- include("../partials/cabecalho.ejs"); %>
+</head>
+<body>
+    <div class="container">
+        <% if(carro == undefined){ %>
+            <div>Não há carro com esse código</div>
+        <% } else { %>
+            <div>Marca: <%= carro.marca %></div>
+            <div>Modelo: <%= carro.modelo %></div>
+            <div>Placa: <%= carro.placa %></div>
+        <% } %>
+        <br>
+        <a href="/carros" class="btn btn-primary">Voltar</a>
+    </div>
+    <%- include("../partials/rodape.ejs"); %>
+</body>
+</html>

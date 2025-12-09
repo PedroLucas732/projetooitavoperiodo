@@ -2,7 +2,7 @@ const express = require("express");
 const routes = express.Router();
 
 const auth = require("../middlewares/usuarioAuth");
-const carroController = require("../controllers/CarroController");
+const carroController = require("../controllers/carroController");
 
 routes.get("/carros", auth, carroController.relatorio);
 routes.get("/carros/cadastrar", auth, carroController.cadastrarGet);
